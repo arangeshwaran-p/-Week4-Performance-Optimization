@@ -1,0 +1,42 @@
+Input size: 12000
+Expected unique values: 1500
+Original runs (seconds): [0.056449, 0.053829, 0.057225, 0.055922, 0.075676]
+Optimized runs (seconds): [0.000268, 0.000125, 0.000123, 0.000123, 0.000123]
+Original average (seconds): 0.05982
+Optimized average (seconds): 0.000153
+Execution-time reduction (%): 99.74
+Speedup (x): 392.14
+
+--- cProfile: original (result=1500) ---
+         1503 function calls in 0.065 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.064    0.064    0.065    0.065 /mnt/data/Week4_Performance_Optimization/original.py:2(count_unique_items)
+     1500    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+
+
+--- cProfile: optimized (result=1500) ---
+         3 function calls in 0.000 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 /mnt/data/Week4_Performance_Optimization/optimized.py:2(count_unique_items)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+
+
+--- UNIT TEST RESULTS ---
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.061s
+
+OK
